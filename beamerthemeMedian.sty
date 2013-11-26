@@ -14,6 +14,7 @@
 \definecolor{MedianLightBlue}{RGB}{148,182,210}
 \definecolor{MedianOrange}{RGB}{221,128,71}
 \definecolor{MedianLightOrange}{RGB}{216,178,92}
+
 \setbeamercolor*{title page header}{fg=white}
 \setbeamercolor*{title}{fg=MedianLightBrown}
 \setbeamercolor*{author}{fg=white}
@@ -29,7 +30,15 @@
 \setbeamerfont{title}{size=\LARGE}
 \setbeamerfont{author}{size=\Large}
 \setbeamerfont{date}{size=\Large}
+
 \setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[square]
+\setbeamertemplate{itemize item}{\tikz{\draw[color=MedianOrange, semithick] rectangle(.2,.2);}}
+\setbeamertemplate{itemize subitem}{\tikz{\draw[color=MedianLightBlue, ultra thick] rectangle(.2,.2);}}
+\setbeamertemplate{sections/subsections in toc}[square]
+
+\newenvironment{xplainframe}{\bgroup\setbeamertemplate{background}{}\begin{frame}[plain]}{\end{frame}\egroup}
+
 \setbeamertemplate{background}{
   \begin{tikzpicture}
   \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
@@ -43,7 +52,6 @@
   \fi
   \end{tikzpicture}
 }
-
 \setbeamertemplate{title page}{
 	\begin{textblock*}{12cm}(2.5cm,2.8cm)
     \begin{beamercolorbox}[wd=8cm]{title page header}
@@ -84,8 +92,3 @@
 		\insertframetitle
 	\end{beamercolorbox}
 }
-\setbeamertemplate{items}[square]
-\setbeamertemplate{itemize item}{\tikz{\draw[color=MedianOrange, semithick] rectangle(.2,.2);}}
-\setbeamertemplate{itemize subitem}{\tikz{\draw[color=MedianLightBlue, ultra thick] rectangle(.2,.2);}}
-\setbeamertemplate{sections/subsections in toc}[square]
-\newenvironment{xplainframe}{\bgroup\setbeamertemplate{background}{}\begin{frame}[plain]}{\end{frame}\egroup}
