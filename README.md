@@ -21,11 +21,15 @@ in which case the theme will load the Beteckna fonts. These are GPL fonts that w
 #### Things to be aware of
 The theme depends on these packages:
 - TikZ/PGF
+
 - datetime
+
 - textpos, _without_ the `[absolute]` option
 
 
 The following features are workarounds because I didn't find the way to hook into some Beamer mechanisms:
+
 - `\sectionframe` should be used instead of `\frame{\sectionpage}`
+
 - `\begin{xplainframe}` and `\end{xplainframe}` should be used instead of `\begin{frame}[plain]` etc.
 
