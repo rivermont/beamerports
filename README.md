@@ -32,7 +32,7 @@ If you're compiling with XeLaTeX or LuaLaTeX, you can also do
     \usepackage[no-math]{fontspec}
     \usetheme[beteckna]{Median}
 
-in which case the theme will load the Beteckna fonts. These are GPL fonts that were obtained from their now defunct website through WaybackMachine. They were the most similar to the Twentieth Century fonts in the original PowerPoint theme. Be aware though that there is no bold italic.
+in which case the theme will load the Beteckna fonts. These are GPL fonts that are available from their now defunct website [through WaybackMachine](http://web.archive.org/web/20130517030302/http://gnu.ethz.ch/linuks.mine.nu/beteckna/). They were the most similar to the Twentieth Century fonts in the original PowerPoint theme. Be aware though that there is no bold italic and several European accents are missing.
 
 Klope
 ------
