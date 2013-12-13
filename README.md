@@ -1,16 +1,20 @@
 BeamerPorts
-=========
+===========
 
 BeamerPorts is my personal project, to develop LaTeX Beamer presentation themes that are not instantly recognisable as Beamer. Specifically, I want to port some great PowerPoint & Powerdot themes to Beamer.
 
 Please send feature requests, bug reports and improvement ideas to the issue tracker.
 
 #### Things to be aware of
-The themes depend on these packages:
+You should not use the `[t]` option to beamer, because the relative positioning done with the `textpos` package expects the default centered horizontal alignment.
+
+The themes use these packages:
 
 - TikZ/PGF
 
-- textpos, _without_ the `[absolute]` option
+- `textpos`, _without_ the `[absolute]` option
+
+- ÿmdframed` is used by the _PraterStreet_ theme
 
 
 The following features are workarounds because I didn't find the way to hook into some Beamer mechanisms:
@@ -20,10 +24,9 @@ The following features are workarounds because I didn't find the way to hook int
 - `\begin{xplainframe}` and `\end{xplainframe}` should be used instead of `\begin{frame}[plain]` etc.
 
 
-
 Median
---------
-Median was originally a PowerPoint theme. You can use it like this:
+------
+_Median_ was originally a PowerPoint theme. You can use it like this:
 
     \usetheme{Median}
 
@@ -34,6 +37,18 @@ If you're compiling with XeLaTeX or LuaLaTeX, you can also do
 
 in which case the theme will load the Beteckna fonts. These are GPL fonts that are available from their now defunct website [through WaybackMachine](http://web.archive.org/web/20130517030302/http://gnu.ethz.ch/linuks.mine.nu/beteckna). They were the most similar to the Twentieth Century fonts in the original PowerPoint theme. Be aware though that there is no bold italic and several European accents are missing.
 
+
 Klope
-------
-Klope was ported from the KlopeSpring theme of Powerdot.
+-----
+_Klope_ was ported from the KlopeSpring theme of Powerdot.
+
+
+PraterStreet
+------------
+_PraterStreet_ is ported from a semi-official PowerPoint theme of the Faculty of Information Technology and Bionics, Pázmány Péter Catholic University, Budapest. Options supported:
+
+- `widescreen`, to change the page size to a widescreen layout
+
+- `nofont`, to suppress the loading of the TeX Gyre Adventor font.
+
+
