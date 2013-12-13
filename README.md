@@ -14,7 +14,7 @@ The themes use these packages:
 
 - `textpos`, _without_ the `[absolute]` option
 
-- ÿmdframed` is used by the _PraterStreet_ theme
+- `mdframed` is used by the _PraterStreet_ theme
 
 
 The following features are workarounds because I didn't find the way to hook into some Beamer mechanisms:
@@ -45,7 +45,7 @@ _Klope_ was ported from the KlopeSpring theme of Powerdot.
 
 PraterStreet
 ------------
-_PraterStreet_ is ported from a semi-official PowerPoint theme of the Faculty of Information Technology and Bionics, Pázmány Péter Catholic University, Budapest. Options supported:
+_PraterStreet_ is ported from a semi-official PowerPoint theme of the Faculty of Information Technology and Bionics, PÃ¡zmÃ¡ny PÃ©ter Catholic University, Budapest. Options supported:
 
 - `widescreen`, to change the page size to a widescreen layout
 
