@@ -60,3 +60,5 @@ _Metro_ tries to resemble the Windows ModernUI style presentation from http://al
  - `SegoeUI` will assume that `fontspec` package is loaded and try to load the _Segoe UI Light_ font that the original presentation used.
 
  - `nonav` suppresses the redesigned navigation symbols.
+
+It seems that XeTeX does not support the hyperlink features, so if you want to use the Segoe font or other OpenType/TrueType font, compile with LuaLaTeX.
