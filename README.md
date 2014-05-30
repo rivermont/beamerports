@@ -58,3 +58,5 @@ Metro
 _Metro_ tries to resemble the Windows ModernUI style presentation from http://alesandrab.wordpress.com/2013/06/03/metro-ui-style-powerpoint-2010-template.  Options supported:
 
  - `SegoeUI` will assume that `fontspec` package is loaded and try to load the _Segoe UI Light_ font that the original presentation used.
+
+ - `nonav` suppresses the redesigned navigation symbols.

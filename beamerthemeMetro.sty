@@ -1,9 +1,15 @@
-\RequirePackage{tikz}
-\RequirePackage[overlay, absolute]{textpos}
+\newif\ifmetronav
+\metronavtrue
 \DeclareOption{SegoeUI}{
 	\setsansfont[Ligatures=TeX]{Segoe UI Light}
 }
+\DeclareOption{nonav}{\metronavfalse}
 \ProcessOptions
+
+\RequirePackage{tikz}
+\RequirePackage[overlay, absolute]{textpos}
+\usetikzlibrary{arrows.meta, shapes.misc}
+
 
 \newcommand{\metro@logo}{}
 \renewcommand{\logo}[1]{\renewcommand{\metro@logo}{#1}}
@@ -34,6 +40,7 @@
 \setbeamercolor{subtitle}{parent={normal text}}
 \setbeamercolor{institute in head/foot}{parent={normal text}}
 \setbeamercolor{headline}{parent={normal text}, bg=MetroDarkBlue}
+\setbeamercolor{qed symbol}{parent={normal text}}
 
 \setbeamerfont{footline}{size=\normalsize}
 \setbeamerfont{logo}{size=\small}
@@ -57,9 +64,31 @@
     \usebeamerfont{logo}\ifnum\thepage>1\relax\metro@logo\fi
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right, rightskip=0.4cm]{navigation symbols}%
-    \usebeamerfont{navigation symbols} Navigation
+    \usebeamerfont{navigation symbols}\metro@navigation
   \end{beamercolorbox}}%
 %  \vskip0pt % what's that for?
+}
+
+\newcommand{\metro@navigation}{% this uses the commands defined in beamerbasenavigation.sty
+	\ifmetronav
+	\begin{tikzpicture}[white, very thick, arrows=-{Straight Barb[length=3pt]}]
+	\draw circle[radius=.25];
+		\draw (.18,0) -- (-.18,0);
+    	\node[rectangle]{\hyperlinkframeendprev{\phantom{\rule{.5cm}{.5cm}}}};
+    \draw (.7,0) circle[radius=.25];
+    	\filldraw (.62,.08) circle[radius=.05]
+				  (.78,.08) circle[radius=.05]
+				  (.62,-.08) circle[radius=.05]
+				  (.78,-.08) circle[radius=.05];
+		\node[rectangle] at (.7,0) {\hyperlinkpresentationstart{\phantom{\rule{.5cm}{.5cm}}}};
+    \draw (1.4,0) circle[radius=.25];
+  		\draw (1.22,0) -- (1.58,0);
+  		\node[rectangle] at (1.4,0) {\hyperlinkframestartnext{\phantom{\rule{.5cm}{.5cm}}}};
+    \draw (2.1,0) circle[radius=.25];
+    	\node[cross out, draw] at (2.1,0){};
+    	\node[rectangle] at (2.1,0){\Acrobatmenu{FullScreen}{\phantom{\rule{.5cm}{.5cm}}}};
+	\end{tikzpicture}
+	\fi
 }
 
 \setbeamertemplate{title page}{%
@@ -82,7 +111,37 @@
 
 \setbeamertemplate{frametitle}{
 \vspace*{0.3cm}
-\begin{beamercolorbox}[wd=\textwidth, dp=0.3cm, ht=0.9cm, leftskip=0.1cm]{frametitle}
+\begin{beamercolorbox}[wd=\textwidth, dp=0.3cm, ht=0.9cm, leftskip=0.2cm]{frametitle}
       \usebeamerfont{frametitle}\insertframetitle%
 \end{beamercolorbox}
+}
+
+\setbeamertemplate{block begin}{
+    \begin{beamercolorbox}[wd=\textwidth, ht=0.5cm, dp=0.2cm, leftskip=0.2cm]{block title}%
+    \usebeamerfont*{block title}%
+        {\rule[-0.4ex]{0mm}{2ex}\insertblocktitle}%
+            \end{beamercolorbox}%
+    {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+    \usebeamerfont{block body}%
+    \begin{beamercolorbox}[wd=\textwidth, ht=0.5cm, dp=0.2cm, leftskip=0.2cm]{block body}%
+        \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+}
+\setbeamertemplate{block end}{
+    \end{beamercolorbox}
+    \vspace*{.25cm}
+}
+
+\setbeamertemplate{block example begin}{
+    \begin{beamercolorbox}[wd=\textwidth, ht=0.5cm, dp=0.2cm, leftskip=0.2cm]{block title example}%
+    \usebeamerfont*{block title example}%
+        {\rule[-0.4ex]{0mm}{2ex}\insertblocktitle}%
+            \end{beamercolorbox}%
+    {\ifbeamercolorempty[bg]{block body example}{}{\nointerlineskip\vskip-0.5pt}}%
+    \usebeamerfont{block body example}%
+    \begin{beamercolorbox}[wd=\textwidth, ht=0.5cm, dp=0.2cm, leftskip=0.2cm]{block body example}%
+        \ifbeamercolorempty[bg]{block body example}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+}
+\setbeamertemplate{block example end}{
+    \end{beamercolorbox}
+    \vspace*{.25cm}
 }
