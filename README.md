@@ -6,18 +6,18 @@ BeamerPorts is my personal project, to develop LaTeX Beamer presentation themes 
 Please send feature requests, bug reports and improvement ideas to the issue tracker.
 
 #### Things to be aware of
-You should not use the `[t]` option to beamer, because the relative positioning done with the `textpos` package expects the default centered horizontal alignment.
+Except for the Metro theme, you should not use the `[t]` option to beamer, because the relative positioning done with the `textpos` package expects the default centered horizontal alignment. (I should change this to use absolute positioning but I don't feel the urge, prompt me if you need this fix.)
 
 The themes use these packages:
 
 - TikZ/PGF
 
-- `textpos`, _without_ the `[absolute]` option
+- `textpos`
 
 - `mdframed` is used by the _PraterStreet_ theme
 
 
-The following features are workarounds because I didn't find the way to hook into some Beamer mechanisms:
+The following features are workarounds because I didn't find the way to hook into some Beamer mechanisms. Except for the Metro theme,
 
 - `\sectionframe` should be used instead of `\frame{\sectionpage}`
 
@@ -52,3 +52,9 @@ _PraterStreet_ is ported from a semi-official PowerPoint theme of the Faculty of
 - `nofont`, to suppress the loading of the TeX Gyre Adventor font.
 
 
+Metro
+-----
+
+_Metro_ tries to resemble the Windows ModernUI style presentation from http://alesandrab.wordpress.com/2013/06/03/metro-ui-style-powerpoint-2010-template.  Options supported:
+
+ - `SegoeUI` will assume that `fontspec` package is loaded and try to load the _Segoe UI Light_ font that the original presentation used.

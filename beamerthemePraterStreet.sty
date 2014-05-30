@@ -6,10 +6,10 @@
 	\addtobeamertemplate{frametitle}{}{\vspace{1cm}}
 }
 \ProcessOptions
-\usepackage{geometry, textpos}
-\usepackage[framemethod=TikZ]{mdframed}
+\RequirePackage{geometry, textpos}
+\RequirePackage[framemethod=TikZ]{mdframed}
 \ifadventor
-	\usepackage{tgadventor}
+	\RequirePackage{tgadventor}
 \fi
 \setbeamertemplate{background}{%
 	\ifnum\thepage>1\relax
@@ -77,3 +77,5 @@
 	\setbeamertemplate{background}{}%
 	\setbeamercolor{frametitle}{bg=PraterStreetTitleBlue}%
 	\begin{frame}[plain]}{\end{frame}\egroup}
+\newcommand{\sectionframe}{\frame{\sectionpage}}
+
