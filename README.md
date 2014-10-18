@@ -47,7 +47,7 @@ _Klope_ was ported from the KlopeSpring theme of Powerdot.
 
 PraterStreet
 ------------
-_PraterStreet_ is ported from a semi-official PowerPoint theme of the Faculty of Information Technology and Bionics, PĂĄzmĂĄny PĂŠter Catholic University, Budapest. Options supported:
+_PraterStreet_ is ported from a semi-official PowerPoint theme of the Faculty of Information Technology and Bionics, Pázmány Péter Catholic University, Budapest. Options supported:
 
 - `widescreen`, to change the page size to a widescreen layout
 
