@@ -16,6 +16,8 @@ The themes use these packages:
 
 - `mdframed` is used by the _PraterStreet_ theme
 
+- `garamondx` is loaded by the _Milano_ theme
+
 
 The following features are workarounds because I didn't find the way to hook into some Beamer mechanisms. Except for the Metro theme,
 
@@ -45,7 +47,7 @@ _Klope_ was ported from the KlopeSpring theme of Powerdot.
 
 PraterStreet
 ------------
-_PraterStreet_ is ported from a semi-official PowerPoint theme of the Faculty of Information Technology and Bionics, Pázmány Péter Catholic University, Budapest. Options supported:
+_PraterStreet_ is ported from a semi-official PowerPoint theme of the Faculty of Information Technology and Bionics, PĂĄzmĂĄny PĂŠter Catholic University, Budapest. Options supported:
 
 - `widescreen`, to change the page size to a widescreen layout
 
@@ -62,3 +64,13 @@ _Metro_ tries to resemble the Windows ModernUI style presentation from http://al
  - `nonav` suppresses the redesigned navigation symbols.
 
 It seems that XeTeX does not support the hyperlink features, so if you want to use the Segoe font or other OpenType/TrueType font, compile with LuaLaTeX.
+
+
+Milano
+------
+
+_Milano_ is based on a thesis presentation theme of __Università Degli Studi de Milano__. It loads the `garamondx` package, so right now it isn't likely to work with XeTeX or LuaTeX. It defines the following commands:
+
+- `\relatore{name}` and `\correlatori{name1}{name2}` are similar to `\author{name}`
+
+- `\thanksframe{text}` creates a 'thanks for your attention' frame with the given text.

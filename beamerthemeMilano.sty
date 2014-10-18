@@ -1,0 +1,93 @@
+\RequirePackage{tikz}
+\RequirePackage{garamondx}
+
+\newcommand{\milano@logo}{}
+\renewcommand{\logo}[1]{\renewcommand{\milano@logo}{#1}}
+\AtBeginDocument{\setbeamertemplate{logo}{}}
+
+\newcommand{\milano@relatore}{}
+\newcommand{\milano@correlatoreA}{}
+\newcommand{\milano@correlatoreB}{}
+\newcommand{\relatore}[1]{\renewcommand{\milano@relatore}{#1}}
+\newcommand{\correlatori}[2]{\renewcommand{\milano@correlatoreA}{#1}\renewcommand{\milano@correlatoreB}{#2}}
+\newcommand{\thanksframe}[1]{{
+	\setbeamercolor{normal text}{bg=MilanoBlue}
+	\begin{frame}[c]
+	\color{white}\Large
+	\centering #1
+	\end{frame}
+}}
+
+\definecolor{MilanoBlue}{RGB}{19,49,109}
+\definecolor{MilanoLightBlue}{RGB}{24,55,123}
+\definecolor{MilanoDarkBlue}{RGB}{16,36,85}
+\definecolor{MilanoTitleBlue}{RGB}{7,27,80}
+\definecolor{MilanoTextGray}{RGB}{66,66,66}
+
+\setbeamercolor{normal text}{fg=MilanoTextGray, bg=white}
+\setbeamercolor{frametitle}{parent={normal text}, fg=MilanoTitleBlue}
+\setbeamercolor{footline}{bg=MilanoBlue, fg=white}
+\setbeamercolor{logo}{parent={footline}}
+\setbeamercolor{institute in head/foot}{parent={footline}}
+\setbeamercolor{item}{parent={normal text}}
+\setbeamercolor{title page}{fg=white}
+\setbeamercolor{block title}{fg=MilanoLightBlue}
+\setbeamercolor{block title example}{fg=MilanoLightBlue}
+\setbeamercolor{section in toc}{fg=MilanoLightBlue}
+\setbeamercolor{subsection in toc}{fg=MilanoLightBlue}
+
+\setbeamerfont{title}{size=\LARGE}
+\setbeamerfont{author}{shape=\itshape}
+\setbeamerfont{frametitle}{series=\bfseries}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}[circle]
+
+\setbeamertemplate{footline}{
+  \leavevmode\hbox{%
+  \begin{beamercolorbox}[wd=.5\paperwidth, ht=.8cm, dp=1ex, left, leftskip=0.2cm, sep=0.2cm]{institute in head/foot}%
+    \usebeamerfont{institute in head/foot}\ifnum\thepage>1\insertinstitute\fi
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth, ht=.8cm, dp=1ex, right, rightskip=0.4cm]{logo}%
+    \usebeamerfont{logo}\ifnum\thepage>1\milano@logo\fi
+  \end{beamercolorbox}}%
+}
+
+\setbeamertemplate{background}{%
+	\ifnum\thepage>1\relax\else%
+	\begin{tikzpicture}
+		\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+		\fill[color=MilanoBlue] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+	\end{tikzpicture}%
+	\fi%
+}
+
+\setbeamertemplate{title page}{
+\usebeamercolor{title page}
+\begin{tikzpicture}
+	\useasboundingbox (1,0) rectangle (\the\paperwidth,\the\paperheight);
+	\node[opacity=.3] at (9.5, 2.2) {\includegraphics[scale=.3]{Milano_logo}};
+%	\draw[step=1, help lines] (0,0) grid (\the\paperwidth,\the\paperheight);
+	\fill[top color=MilanoLightBlue, middle color=MilanoLightBlue, bottom color=MilanoDarkBlue] (0, 6.75) rectangle (\the\paperwidth, 8.75);
+	\node at (2.15, 7.75) {\includegraphics[scale=.06]{Milano_logo}};
+	\draw[thick] (3.4, 8.25) -- (3.4, 7.25);
+	\node[right, align=left, font=\rmfamily\bfseries] at (3.7, 7.8) {UNIVERSIT\`A DEGLI STUDI\\ DI MILANO};
+	\node[right] at (9.9, 7.8) {\includegraphics[scale=.07]{Milano_pong}};
+	\node[align=center, font=\usebeamerfont{title}] at (8.1, 4.5) {\inserttitle};
+	\node[align=left, font=\usebeamerfont{author}] at (10.3, 1.4) {\insertauthor};
+	\node[align=left, font=\usebeamerfont{author}, right] at (0, 1.4) {
+		\begin{tabular}{ll}
+		Relatore: & \milano@relatore \\
+		Correlatore: & \milano@correlatoreA \\
+		Correlatore: & \milano@correlatoreB \\
+		\end{tabular}
+	};
+\end{tikzpicture}
+}
+
+\setbeamertemplate{frametitle}{
+\vspace*{0.1cm}%
+\begin{beamercolorbox}{frametitle}
+	\usebeamerfont{frametitle}\insertframetitle%
+\end{beamercolorbox}
+}
