@@ -74,3 +74,5 @@ _Milano_ is based on a thesis presentation theme of __Università Degli Studi de
 - `\relatore{name}` and `\correlatori{name1}{name2}` are similar to `\author{name}`
 
 - `\thanksframe{text}` creates a 'thanks for your attention' frame with the given text.
+
+By request I removed the logos of said university and replaced them with the logo of my university.

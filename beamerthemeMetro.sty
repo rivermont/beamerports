@@ -116,29 +116,29 @@
 }
 
 \setbeamertemplate{block begin}{
-    \begin{beamercolorbox}[wd=\textwidth, ht=0.5cm, dp=0.2cm, leftskip=0.2cm]{block title}%
-    \usebeamerfont*{block title}%
-        {\rule[-0.4ex]{0mm}{2ex}\insertblocktitle}%
-            \end{beamercolorbox}%
-    {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
-    \usebeamerfont{block body}%
-    \begin{beamercolorbox}[wd=\textwidth, ht=0.5cm, dp=0.2cm, leftskip=0.2cm]{block body}%
-        \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+	\vskip\baselineskip
+	\begin{beamercolorbox}[wd=\textwidth, ht=0.5cm, dp=0.2cm, leftskip=0.2cm]{block title}%
+		\usebeamerfont*{block title}{\rule[-0.4ex]{0mm}{2ex}\insertblocktitle}%
+	\end{beamercolorbox}%
+	{\nointerlineskip\vskip-0.5pt}%
+	\usebeamerfont{block body}%
+	\begin{beamercolorbox}[wd=\textwidth, leftskip=0.2cm, dp=0.2cm]{block body}%
+    \vskip-.75ex\vbox{}%
 }
 \setbeamertemplate{block end}{
-    \end{beamercolorbox}
-    \vspace*{.25cm}
+	\end{beamercolorbox}
+	\vspace*{.25cm}
 }
 
 \setbeamertemplate{block example begin}{
-    \begin{beamercolorbox}[wd=\textwidth, ht=0.5cm, dp=0.2cm, leftskip=0.2cm]{block title example}%
-    \usebeamerfont*{block title example}%
-        {\rule[-0.4ex]{0mm}{2ex}\insertblocktitle}%
-            \end{beamercolorbox}%
-    {\ifbeamercolorempty[bg]{block body example}{}{\nointerlineskip\vskip-0.5pt}}%
-    \usebeamerfont{block body example}%
-    \begin{beamercolorbox}[wd=\textwidth, ht=0.5cm, dp=0.2cm, leftskip=0.2cm]{block body example}%
-        \ifbeamercolorempty[bg]{block body example}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+	\vskip\baselineskip
+	\begin{beamercolorbox}[wd=\textwidth, ht=0.5cm, dp=0.2cm, leftskip=0.2cm]{block title example}%
+		\usebeamerfont*{block title example}{\rule[-0.4ex]{0mm}{2ex}\insertblocktitle}%
+	\end{beamercolorbox}%
+	{\nointerlineskip\vskip-0.5pt}%
+	\usebeamerfont{block body example}%
+	\begin{beamercolorbox}[wd=\textwidth, leftskip=0.2cm, dp=0.2cm]{block body example}%
+    \vskip-.75ex\vbox{}%
 }
 \setbeamertemplate{block example end}{
     \end{beamercolorbox}
