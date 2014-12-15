@@ -74,7 +74,6 @@ _Milano_ is based on a thesis presentation theme of __Università Degli Studi de
 - `\supervisor{}` and `\department{}` are similar to `\author{}` and `\institute{}`
 - `\titlepagelogoA{}` and `\titlepagelogoB{}` set up the two logos on the title page
 - `\backgroundlogo{}` sets up the opaque background used on the title page
-
 - `\thanksframe{text}` creates a 'thanks for your attention' frame with the given text.
 
 By request I removed the logos of said university and replaced them with the logo of my university.
