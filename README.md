@@ -71,7 +71,9 @@ Milano
 
 _Milano_ is based on a thesis presentation theme of __Università Degli Studi de Milano__. It loads the `garamondx` package, so right now it isn't likely to work with XeTeX or LuaTeX. It defines the following commands:
 
-- `\relatore{name}` and `\correlatori{name1}{name2}` are similar to `\author{name}`
+- `\supervisor{}` and `\department{}` are similar to `\author{}` and `\institute{}`
+- `\titlepagelogoA{}` and `\titlepagelogoB{}` set up the two logos on the title page
+- `\backgroundlogo{}` sets up the opaque background used on the title page
 
 - `\thanksframe{text}` creates a 'thanks for your attention' frame with the given text.
 
