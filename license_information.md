@@ -1,10 +1,10 @@
 
 
-These Beamer themes build heavily upon the help I got from the users of http://tex.stackexchange.com answering my questions. More specifically:
+These Beamer themes build heavily upon the help I got from the users of [TeX.SX](http://tex.stackexchange.com) answering my questions. More specifically:
 
-[Claudio Fiandrino](http://tex.stackexchange.com/users/13304/claudio-fiandrino)'s answer at http://tex.stackexchange.com/a/146682/21963
-[samcarter](http://tex.stackexchange.com/users/36296/samcarter)'s answer at http://tex.stackexchange.com/a/181248/21963
-[cfr](http://tex.stackexchange.com/users/39222/cfr)'s answer at http://tex.stackexchange.com/a/217885/21963
+- [Claudio Fiandrino](http://tex.stackexchange.com/users/13304/claudio-fiandrino)'s answer at http://tex.stackexchange.com/a/146682/21963
+- [samcarter](http://tex.stackexchange.com/users/36296/samcarter)'s answer at http://tex.stackexchange.com/a/181248/21963
+- [cfr](http://tex.stackexchange.com/users/39222/cfr)'s answer at http://tex.stackexchange.com/a/217885/21963
 
 Because of all StackExchange user content being licensed under the [CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0) license, these themes are too. I believe that this text file makes me comply with the requirements of the license.
 
