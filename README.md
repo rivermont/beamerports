@@ -1,5 +1,5 @@
-BeamerPorts
-===========
+# BeamerPorts
+## PowerPoint themes for Beamer
 
 BeamerPorts is my personal project, to develop LaTeX Beamer presentation themes that are not instantly recognisable as Beamer. Specifically, I want to port some great PowerPoint & Powerdot themes to Beamer.
 
